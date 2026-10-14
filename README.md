@@ -41,6 +41,8 @@ git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://githu
 
 ### Ou acesse o link: 
 
+ever1pdl.github.io/landing-page-hamburgueria.io/
+
 ## 📄Licença
 Desenvolvido por Lazaro H. - Todos os direitos reservados © 2026.
 
