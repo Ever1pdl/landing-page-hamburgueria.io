@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap");
+
+::selection {
+  background-color: rgba(255,165,0,0.5)
+}
+
+.escondido{
+  opacity: 0;
+  filter: blur(5px); 
+  transition: all 0.8s ease-out;
+}
+.escondido.aparecer{
+  opacity: 1;
+  filter: blur(0);
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  margin: 0;
+  color: white;
+  scroll-behavior: smooth;
+}
+body{
+  padding-top: clamp(10vh, 15vw, 150px);
+  background-color: black;
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+}
+header{
+  box-shadow: 0px 5px 50px 4px black;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: clamp(10vh, 15vw, 150px);
+}
+#container_cardapio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: clamp(15vh, 15vw, 20vw);
+}
+#botao_cardapio{
+  font-size: clamp(2vh, 8rem, 2vw);
+  text-decoration: none;
+  background: #2e2e33;
+  background: linear-gradient(143deg, rgba(46, 46, 51, 1) 0%, rgba(5, 4, 4, 1) 100%);
+  border-radius: 15px;
+  width: 40vw;
+  max-width: 550px;
+  height: clamp(6vh, 15vw, 8vh);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+#botao_cardapio:hover{
+  transform: scale(1.1);
+  color: gold;
+}
+#logo{
+  width: auto;
+  max-width: 200px;
+  height: 100%;
+}
+#imagem_fundo{
+  background-image: url(imgs/fundo_hamburguer.jpg) ;
+  width: auto;
+  height: 50vh;
+  left: 0;
+  top: 0;
+  margin: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-position: center;
+  background-size: cover;
+}
+#texto_fundo{
+  text-align: center;
+  padding: 40px 10px 10px 10px;
+  color: white;
+  font-family: cursive;
+  font-size: clamp(4.5vh, 4rem, 6vw);
+}
+.titulo{
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 3vw;
+  text-align: center;
+  font-size: clamp(3.5vh, 5vw, 700px);
+  border-bottom: 2px solid white;
+}
+nav{
+  background-color: black;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.botao{
+  font-family: "Cinzel", serif;
+  scroll-behavior: smooth;
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 0px 2px 0px 2px;
+  font-size: clamp(2.5vh, 4rem, 2.5vw);
+  transition: transform 0.3s ease-in-out;
+}
+.botao:hover{
+  color: gold;
+  transform: scale(1.1);
+}
+#texto_sobre{
+  padding: 3.5vh;
+  font-size: clamp(2.5vh, 2rem, 4vw);
+}
+
+.item_cardapio{
+  display: flex;
+  background: #2e2e33;
+  background: linear-gradient(143deg, rgba(46, 46, 51, 1) 0%, rgba(5, 4, 4, 1) 100%);
+  width: 85%;
+  border-radius: 20px;
+  position: relative;
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out;
+}
+.item_cardapio:hover{
+  transform: scale(1.1);
+  
+}
+#lista_cardapio{
+  margin: 7vw 0 7vw 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4vh,7vw,80px);
+}
+
+.nome_item{
+  font-size: clamp(2vh, 2.8vw, 150px);
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+.img_item_cardapio{
+  box-shadow: 0px 0px 5vw 0.25vw white;
+  height: clamp(12vh,25vw,500px);
+  position: relative;
+  border: 1px solid black;
+  margin-left: auto;
+  max-height: 200px;
+  margin: 2.5vh 2.5vw 2.5vh 2.5vw;
+  align-self: center;
+  
+}
+.igredientes_cardapio{
+  overflow-y: scroll;
+  max-height: 20vw;
+}
+.container_nome_igrediente{
+  padding: 10px;
+  flex: 1;
+}
+li{
+  font-size: clamp(0.9rem,2.1vw,8vh);
+  padding: 0;
+}
+ul{
+  padding-left: 0;
+  text-align: left;
+}
+
+footer{
+  font-family: "Cormorant Garamond", serif;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  height: clamp(18vh, 20vw, 700px);
+  text-align: center;
+  padding: clamp(2.5vh, 5vw, 150px);
+  background: #594a04;
+  background: linear-gradient(311deg, rgba(89, 74, 4, 1) 0%, rgba(48, 45, 16, 1) 63%, rgba(59, 56, 56, 1) 100%);
+  font-size: clamp(3.5vh, 4vw,200px)
+}
+#botao_acao{
+  box-shadow: 0px 2px 25px 4px black;
+  position: fixed;
+  z-index: 1000;
+  border-radius: 50%;
+  height: clamp(7.5vh, 8vw, 700px);
+  width: auto;
+  bottom: 4vh;
+  right: 5vw;
+  transition: transform 0.3s ease-in-out;
+}
+#botao_acao:hover{
+  border: 1px solid gold;
+  transform: scale(1.1);
+}
